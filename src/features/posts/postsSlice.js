@@ -21,21 +21,6 @@ export const fetchPosts = createAsyncThunk(
   }
 );
 
-// export const createNewUser = createAsyncThunk(
-//   "users/addNewUser",
-//   async (initialUser) => {
-//     try {
-//       const response = await axios.post(
-//         API_BASE_URL + "posts",
-//         initialUser
-//       );
-//       return response.data;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// );
-
 const postsSlice = createSlice({
   name: "posts",
   initialState: initialData,
@@ -59,14 +44,6 @@ const postsSlice = createSlice({
         state.status = "failed";
         state.error = action.error.message;
       })
-    //   .addCase(createNewUser.fulfilled, (state, action) => {
-    //     state.status = "succeeded";
-    //     state.createdUsers.push(action.payload);
-    //   })
-    //   .addCase(createNewUser.rejected, (state, action) => {
-    //     state.status = "failed";
-    //     state.error = action.error.message;
-    //   });
   },
 });
 

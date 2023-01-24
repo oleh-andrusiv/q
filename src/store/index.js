@@ -4,6 +4,7 @@ import themeReducer from "../features/theme/themeSlice";
 import tabsReducer from "../features/tabs/tabsSlice";
 import userReducer from "../features/users/usersSlice";
 import postReducer from "../features/posts/postsSlice";
+import loginReducer from '../features/login/loginSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,5 +12,6 @@ export const store = configureStore({
     tabs: tabsReducer,
     users: userReducer,
     posts: postReducer,
+    login: loginReducer
   },
 });

@@ -3,11 +3,9 @@ import axios from "axios";
 import { API_BASE_URL } from "../../utils/API";
 
 const initialData = {
-  email: '',
-  password: '',
   status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  login: ''
+//   login: ''
 };
 
 export const publishLogin = createAsyncThunk(
