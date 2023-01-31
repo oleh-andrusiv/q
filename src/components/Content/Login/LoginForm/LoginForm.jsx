@@ -99,7 +99,7 @@ const LoginForm = () => {
                                 onClick={loginSubmit}
                                 disabled={!isValid || !dirty}
                             >
-                                Login
+                                LogIn
                             </Button>
                         </Form>
                         )}
@@ -164,7 +164,7 @@ const LoginForm = () => {
                                 onClick={loginSubmit}
                                 disabled={!isValid || !dirty}
                             >
-                                Order
+                                LogIn
                             </Button>
                         </Form>
                         )}
