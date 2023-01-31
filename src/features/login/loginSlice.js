@@ -4,8 +4,8 @@ import { API_BASE_URL } from "../../utils/API";
 
 const initialData = {
   status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
+  login: null,
   error: null,
-//   login: ''
 };
 
 export const publishLogin = createAsyncThunk(
