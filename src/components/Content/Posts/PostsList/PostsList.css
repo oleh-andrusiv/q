@@ -1,0 +1,44 @@
+.posts_list {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.posts_navigation {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.posts_btn {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: rgb(136, 131, 131);
+    box-shadow: none;
+}
+
+.posts_navigation_legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px;
+    width: 80px;
+}
+
+.posts_loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+}

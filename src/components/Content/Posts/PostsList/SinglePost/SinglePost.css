@@ -1,0 +1,16 @@
+.single-post {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 300px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.single-post_color {
+    height: 200px;
+}
+
+p {
+    margin: 0;
+}
