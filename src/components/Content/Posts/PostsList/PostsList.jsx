@@ -12,7 +12,7 @@ const PostsList = () => {
 
   const dispatch = useDispatch();
 
-  const [ordersPortion, setOrdersPortion] = useState([]);
+  const [postsPortion, setPostsPortion] = useState([]);
   const [pageQuantity, setPageQuantity] = useState(0);
   const [prevBtnActive, setPrevBtnActive] = useState('disabled');
   const [nextBtnActive, setNextBtnActive] = useState('');
@@ -35,7 +35,7 @@ const PostsList = () => {
 
       setPageQuantity(definePageQuantity(posts.length));
 
-      const newOrdersPortion = posts.slice(startIndex, endIndex)
+      const newPostsPortion = posts.slice(startIndex, endIndex)
 
       if (curentPage === pageQuantity) {
           setNextBtnActive('disabled')
@@ -51,7 +51,7 @@ const PostsList = () => {
           setPrevBtnActive('')
       }
 
-      setOrdersPortion(newOrdersPortion)
+      setPostsPortion(newPostsPortion)
   },[curentPage, pageQuantity, posts])
 
   const changePage = (event) => {
@@ -68,11 +68,11 @@ const PostsList = () => {
     }
   } 
 
-  if (ordersPortion !== []) {
+  if (postsPortion !== []) {
     return (
       <div className="posts">
         <ul className="posts_list">
-          {ordersPortion.map((post, index) => {
+          {postsPortion.map((post, index) => {
             return (
               <SinglePost
                 key={index + post.name}
@@ -96,12 +96,12 @@ const PostsList = () => {
       </div> 
     )
   } 
-  if (ordersPortion === []  && error === null) {
+  if (postsPortion === []  && error === null) {
     return (
       <CircularProgress className="posts_loader"/>
     )
   }
-  if (ordersPortion === []  && error !== null) {
+  if (postsPortion === []  && error !== null) {
     return (
       <div className="posts">
         <h5>{error}</h5>
